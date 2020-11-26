@@ -176,6 +176,8 @@ void account_query::delete_rec()
     rename("tmpfile.bank", "record.bank");
 }
 
+// *********************** MAIN ***********************
+
 int main()
 {
     account_query A;
@@ -193,6 +195,7 @@ int main()
         cout << "\nEnter your choice: ";
         cin >> choice;
         cout << endl;
+
         switch (choice)
         {
         case 1:
