@@ -102,6 +102,7 @@ void account_query::search_rec()
         cout << "\nError in opening! File Not Found!!" << endl;
         return;
     }
+
     infile.seekg(0, ios::end);
     int count = infile.tellg() / sizeof(*this);
     cout << "\n There are " << count << " record in the file";
@@ -109,6 +110,7 @@ void account_query::search_rec()
     cin >> n;
     infile.seekg((n - 1) * sizeof(*this));
     infile.read(reinterpret_cast<char *>(this), sizeof(*this));
+
     show_data();
 }
 
