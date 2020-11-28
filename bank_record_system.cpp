@@ -108,6 +108,7 @@ void account_query::search_rec()
     cout << "\n There are " << count << " record in the file";
     cout << "\n Enter Record Number to Search: ";
     cin >> n;
+
     infile.seekg((n - 1) * sizeof(*this));
     infile.read(reinterpret_cast<char *>(this), sizeof(*this));
 
